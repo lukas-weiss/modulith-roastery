@@ -1,0 +1,9 @@
+# Kotlin / Gradle
+kotlin/.gradle/
+kotlin/build/
+kotlin/.kotlin/
+*.iml
+.idea/
+
+# Go
+go/build/
