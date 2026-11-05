@@ -7,6 +7,7 @@ func TestModuleOf(t *testing.T) {
 		"lweiss.dev/northbean/inventory/internal.OrderPlacedListener.On": "inventory",
 		"lweiss.dev/northbean/notification.Listener.On":                  "notification",
 		"lweiss.dev/northbean/orphan":                                    "orphan",
+		"other/pkg.Listener.On":                                          "other",
 		"":                                                               "",
 	}
 	for listenerID, want := range tests {
