@@ -75,7 +75,7 @@ So an event must survive a round trip through `encoding/json`.
 | `inventory/service_test.go` | Starts only the inventory module, publishes an `OrderPlaced` event by hand, then waits until the stock has changed. |
 | `inventory/internal/stock_test.go` | The stock changes for all products of an order, or for none. |
 | `internal/events/registry_test.go` | A failed publication stays stored and completes on resubmit, a panicking listener fails. |
-| `eventlog/controller_test.go` | `moduleOf` finds the module of a listener ID, also when the ID has no separator after the prefix. |
+| `eventlog/controller_test.go` | `moduleOf` finds the module of a listener ID and does not panic on IDs the registry never builds (no separator after the prefix, foreign prefix). |
 | `shop_test.go` | The whole shop over HTTP: order too much, inventory fails, restock, resubmit. |
 
 Try breaking a rule: in `notification`, import `lweiss.dev/northbean/order/internal`. Nothing compiles:

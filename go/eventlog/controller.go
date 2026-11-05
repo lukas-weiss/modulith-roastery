@@ -58,7 +58,7 @@ func Routes(mux *http.ServeMux, registry *events.Registry) {
 }
 
 // moduleOf turns "lweiss.dev/northbean/inventory/internal.OrderPlacedListener.On" into "inventory".
-// Without a separator it returns the rest unchanged, like Kotlin's substringBefore.
+// Without a separator after the prefix it returns the rest unchanged instead of panicking.
 func moduleOf(listenerID string) string {
 	rest := strings.TrimPrefix(listenerID, basePackage)
 	if i := strings.IndexAny(rest, "/."); i >= 0 {
