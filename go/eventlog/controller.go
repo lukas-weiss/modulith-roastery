@@ -11,12 +11,12 @@ import (
 	"strings"
 	"time"
 
-	"example.com/shop/internal/events"
-	"example.com/shop/internal/web"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/internal/web"
 )
 
-// basePackage is the Go counterpart of the Kotlin version's main package com.example.shop.
-const basePackage = "example.com/shop/"
+// basePackage is the Go counterpart of the Kotlin version's main package dev.lweiss.northbean.
+const basePackage = "lweiss.dev/northbean/"
 
 type publication struct {
 	ID          string          `json:"id"`
@@ -57,13 +57,13 @@ func Routes(mux *http.ServeMux, registry *events.Registry) {
 	})
 }
 
-// moduleOf turns "example.com/shop/inventory/internal.OrderPlacedListener.On" into "inventory".
+// moduleOf turns "lweiss.dev/northbean/inventory/internal.OrderPlacedListener.On" into "inventory".
 func moduleOf(listenerID string) string {
 	rest := strings.TrimPrefix(listenerID, basePackage)
 	return rest[:strings.IndexAny(rest, "/.")]
 }
 
-// listenerOf turns "example.com/shop/inventory/internal.OrderPlacedListener.On" into "OrderPlacedListener.On".
+// listenerOf turns "lweiss.dev/northbean/inventory/internal.OrderPlacedListener.On" into "OrderPlacedListener.On".
 func listenerOf(listenerID string) string {
 	parts := strings.Split(listenerID[strings.LastIndex(listenerID, "/")+1:], ".")
 	return strings.Join(parts[max(0, len(parts)-2):], ".")

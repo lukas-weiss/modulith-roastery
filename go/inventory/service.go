@@ -3,9 +3,9 @@ package inventory
 import (
 	"cmp"
 
-	"example.com/shop/internal/check"
-	"example.com/shop/internal/events"
-	"example.com/shop/inventory/internal"
+	"lweiss.dev/northbean/internal/check"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/inventory/internal"
 )
 
 // Service is the public API of the inventory module.

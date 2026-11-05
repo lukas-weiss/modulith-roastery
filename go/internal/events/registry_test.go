@@ -36,7 +36,7 @@ func TestFailedPublicationStaysUntilResubmitted(t *testing.T) {
 	if p.Status != Failed || p.CompletionAttempts != 1 || p.CompletionDate != nil {
 		t.Fatalf("after publish: %+v", p)
 	}
-	if p.ListenerID != "example.com/shop/internal/events.flaky.On" || p.EventType != "example.com/shop/internal/events.greeting" {
+	if p.ListenerID != "lweiss.dev/northbean/internal/events.flaky.On" || p.EventType != "lweiss.dev/northbean/internal/events.greeting" {
 		t.Fatalf("ids: %+v", p)
 	}
 	if p.SerializedEvent != `{"Name":"Ada"}` {

@@ -1,3 +1,3 @@
-module example.com/shop
+module lweiss.dev/northbean
 
 go 1.27.0

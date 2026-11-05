@@ -7,8 +7,8 @@ import (
 	"log/slog"
 	"strings"
 
-	"example.com/shop/internal/events"
-	"example.com/shop/order"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/order"
 )
 
 // NotificationListener reacts to OrderPlaced. (The name repeats the package to match the Kotlin version.)

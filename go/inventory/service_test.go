@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"example.com/shop/internal/events"
-	"example.com/shop/internal/uuid"
-	"example.com/shop/inventory"
-	"example.com/shop/order"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/internal/uuid"
+	"lweiss.dev/northbean/inventory"
+	"lweiss.dev/northbean/order"
 )
 
 // Starts only the inventory module and feeds it an event, as if the order module had sent it.

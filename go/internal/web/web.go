@@ -7,7 +7,7 @@ import (
 	"log/slog"
 	"net/http"
 
-	"example.com/shop/internal/check"
+	"lweiss.dev/northbean/internal/check"
 )
 
 // ReadJSON decodes the request body into target. On failure it answers 400 and returns false.

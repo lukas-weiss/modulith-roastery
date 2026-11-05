@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"example.com/shop/internal/uuid"
+	"lweiss.dev/northbean/internal/uuid"
 )
 
 // Status of a publication, with the same names as in Spring Modulith.
@@ -37,8 +37,8 @@ const (
 // Publication is one event for one listener: one row of EVENT_PUBLICATION.
 type Publication struct {
 	ID                 string
-	EventType          string // "example.com/shop/order.OrderPlaced"
-	ListenerID         string // "example.com/shop/inventory/internal.OrderPlacedListener.On"
+	EventType          string // "lweiss.dev/northbean/order.OrderPlaced"
+	ListenerID         string // "lweiss.dev/northbean/inventory/internal.OrderPlacedListener.On"
 	SerializedEvent    string // the event as JSON
 	Status             Status
 	PublicationDate    time.Time

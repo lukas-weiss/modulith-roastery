@@ -6,7 +6,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"example.com/shop/order"
+	"lweiss.dev/northbean/order"
 )
 
 // OrderPlacedListener reduces the stock when an order is placed. It may use order.OrderPlaced,
