@@ -8,10 +8,10 @@
 const TEXTS = {
   de: {
     locale: "de-DE",
-    title: "Modulith-Rösterei",
+    title: "Northbean Rösterei",
     language: "Sprache",
     intro:
-      "Der Onlineshop einer kleinen Kaffeerösterei, aufgeteilt in drei Module. <code>order</code> kennt die anderen nicht, es meldet nur das Event " +
+      "Der Onlineshop von Northbean, einer kleinen Kaffeerösterei, aufgeteilt in drei Module. <code>order</code> kennt die anderen nicht, es meldet nur das Event " +
       "<code>OrderPlaced</code>. <code>inventory</code> und <code>notification</code> hören darauf, jedes für sich.",
     boardTitle: "Weg des Events durch die Module",
     boardAria: "order sendet OrderPlaced an inventory und notification",
@@ -65,10 +65,10 @@ const TEXTS = {
 
   en: {
     locale: "en-GB",
-    title: "Modulith Roastery",
+    title: "Northbean Roastery",
     language: "Language",
     intro:
-      "The online shop of a small coffee roastery, split into three modules. <code>order</code> does not know the others, it only announces the event " +
+      "The online shop of Northbean, a small coffee roastery, split into three modules. <code>order</code> does not know the others, it only announces the event " +
       "<code>OrderPlaced</code>. <code>inventory</code> and <code>notification</code> listen for it, each on its own.",
     boardTitle: "How the event travels through the modules",
     boardAria: "order sends OrderPlaced to inventory and notification",

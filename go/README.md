@@ -1,6 +1,6 @@
 # Modulith Roastery (Go)
 
-The Go twin of [`../kotlin`](../kotlin): the same online shop of a small coffee roastery (crema
+The Go twin of [`../kotlin`](../kotlin): the same online shop of Northbean, a small coffee roastery (crema
 beans, espresso beans, espresso cups), the same modules, events, HTTP API and web UI. There is no Spring
 Modulith for Go, so the parts it provides are written out by hand, with nothing but the standard library.
 
@@ -77,10 +77,10 @@ So an event must survive a round trip through `encoding/json`.
 | `internal/events/registry_test.go` | A failed publication stays stored and completes on resubmit, a panicking listener fails. |
 | `shop_test.go` | The whole shop over HTTP: order too much, inventory fails, restock, resubmit. |
 
-Try breaking a rule: in `notification`, import `example.com/shop/order/internal`. Nothing compiles:
+Try breaking a rule: in `notification`, import `lweiss.dev/northbean/order/internal`. Nothing compiles:
 
 ```
-notification/listener.go:12:2: use of internal package example.com/shop/order/internal not allowed
+notification/listener.go:12:2: use of internal package lweiss.dev/northbean/order/internal not allowed
 ```
 
 ## Run it

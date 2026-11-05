@@ -1,6 +1,6 @@
 # Modulith Roastery
 
-A learning project: the online shop of a small coffee roastery, built as a **modular monolith** twice.
+A learning project: the online shop of Northbean, a small coffee roastery, built as a **modular monolith** twice.
 
 | Folder | Stack | How the modules are kept apart |
 |---|---|---|
@@ -40,7 +40,7 @@ Tests: `./gradlew test` in `kotlin/`, `go test -race ./...` in `go/`.
 
 | Idea | Kotlin | Go |
 |---|---|---|
-| A module | direct sub-package of `com.example.shop` | direct sub-directory, except `internal/` |
+| A module | direct sub-package of `dev.lweiss.northbean` | direct sub-directory, except `internal/` |
 | Hidden internals | sub-packages, checked by `ApplicationModules.verify()` | `internal/` packages, enforced by the compiler |
 | Wiring | Spring component scan | `newShop()` in `main.go` |
 | Publish an event | `ApplicationEventPublisher.publishEvent` | `events.Publisher.Publish` |

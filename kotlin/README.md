@@ -1,6 +1,6 @@
 # Modulith Roastery (Kotlin)
 
-The online shop of a small coffee roastery (crema beans, espresso beans, espresso cups). It shows the core ideas of [Spring Modulith](https://spring.io/projects/spring-modulith):
+The online shop of Northbean, a small coffee roastery (crema beans, espresso beans, espresso cups). It shows the core ideas of [Spring Modulith](https://spring.io/projects/spring-modulith):
 one Spring Boot application, split into **modules** that talk to each other through **events**.
 
 Kotlin 2.4 · Spring Boot 4.1 · Spring Modulith 2.1 · Java 21
@@ -27,8 +27,8 @@ New features (e.g. invoicing) can listen to the same event without changing `ord
 ## Project layout
 
 ```
-src/main/kotlin/com/example/shop/
-├── ShopApplication.kt
+src/main/kotlin/dev/lweiss/northbean/
+├── NorthbeanApplication.kt
 ├── order/                      ← module "order"
 │   ├── OrderPlaced.kt          public API: the event
 │   ├── OrderLine.kt            public API: one product and quantity of an order
@@ -72,11 +72,11 @@ src/main/resources/static/      ← the web UI (plain HTML, CSS, JS, no build st
 | `OrderModuleTests` | `@ApplicationModuleTest` starts **only** the order module. `Scenario` checks that placing an order publishes `OrderPlaced`. |
 | `InventoryModuleTests` | Starts only the inventory module, publishes an `OrderPlaced` event by hand, then waits until the stock has changed. |
 
-Try breaking a rule: in `notification`, import `com.example.shop.order.internal.Order` and run the tests.
+Try breaking a rule: in `notification`, import `dev.lweiss.northbean.order.internal.Order` and run the tests.
 `ModularityTests` fails with:
 
 ```
-Module 'notification' depends on non-exposed type com.example.shop.order.internal.Order within module 'order'!
+Module 'notification' depends on non-exposed type dev.lweiss.northbean.order.internal.Order within module 'order'!
 ```
 
 ## Run it

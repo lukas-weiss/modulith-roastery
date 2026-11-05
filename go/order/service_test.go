@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"testing"
 
-	"example.com/shop/internal/events"
-	"example.com/shop/order"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/order"
 )
 
 type recorder struct{ events chan order.OrderPlaced }

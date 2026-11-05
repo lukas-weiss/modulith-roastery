@@ -16,7 +16,7 @@ import (
 // import order/internal, and packages may not import each other in a cycle. This test checks the same
 // on the level of modules, prints the module structure and writes a PlantUML diagram.
 
-const modulePath = "example.com/shop/"
+const modulePath = "lweiss.dev/northbean/"
 
 // modules maps each module (direct sub-directory with Go code, except internal/) to the modules it uses.
 func modules(t *testing.T) map[string][]string {

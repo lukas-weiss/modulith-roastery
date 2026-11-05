@@ -4,10 +4,10 @@ import (
 	"cmp"
 	"slices"
 
-	"example.com/shop/internal/check"
-	"example.com/shop/internal/events"
-	"example.com/shop/internal/uuid"
-	"example.com/shop/order/internal"
+	"lweiss.dev/northbean/internal/check"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/internal/uuid"
+	"lweiss.dev/northbean/order/internal"
 )
 
 // Service is the public API of the order module.

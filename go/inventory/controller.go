@@ -3,7 +3,7 @@ package inventory
 import (
 	"net/http"
 
-	"example.com/shop/internal/web"
+	"lweiss.dev/northbean/internal/web"
 )
 
 type restockRequest struct {

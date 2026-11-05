@@ -1,6 +1,6 @@
 // The online shop of a small coffee roastery, split into modules that talk through events.
 //
-// Every direct sub-package of example.com/shop is a module (internal/ holds the shared plumbing):
+// Every direct sub-package of lweiss.dev/northbean is a module (internal/ holds the shared plumbing):
 //
 //   - order        – accepts orders and publishes order.OrderPlaced
 //   - inventory    – reacts to OrderPlaced and reduces the stock
@@ -18,11 +18,11 @@ import (
 	"net/http"
 	"os"
 
-	"example.com/shop/eventlog"
-	"example.com/shop/internal/events"
-	"example.com/shop/inventory"
-	"example.com/shop/notification"
-	"example.com/shop/order"
+	"lweiss.dev/northbean/eventlog"
+	"lweiss.dev/northbean/internal/events"
+	"lweiss.dev/northbean/inventory"
+	"lweiss.dev/northbean/notification"
+	"lweiss.dev/northbean/order"
 )
 
 //go:embed static
